@@ -1,0 +1,76 @@
+CREATE TABLE authors (
+    authorID int,
+    authorFIRSTNAME varchar(100),
+    authorLASTNAME varchar(100),
+    authorBIOGRAPHY text,
+    DOB date
+);
+
+CREATE TABLE publishers (
+    publisherID int,
+    publisherNAME varchar(100),
+    countryofORIGIN varchar(100)
+);
+
+CREATE TABLE books (
+    bookID int,
+    bookTITLE varchar(100),
+    bookISBN int,
+    publicationDATE date,
+    bookPRICE int(40)
+);
+
+CREATE TABLE books_authors (
+    bookID int,
+    authorID int
+);
+
+CREATE TABLE patients (
+    patientID int,
+    patientFIRSTNAME varchar(100),
+    patientLASTNAME varchar(100),
+    DOB date,
+    phoneNUMBER int,
+    patientRECORD date
+);
+
+CREATE TABLE doctors (
+    doctorID int,
+    doctorFIRSTNAME varchar(100),
+    doctoreLASTNAME varchar(100),
+    medicalSPECIALITY varchar(100),
+    yearLICENSED date
+);
+
+CREATE TABLE appointments (
+    appointmentID int,
+    DOT datetime,
+    reasonforVISIT text,
+    statusofAPPOINTMENT enum('Scheduled','Completed', 'Canceled', 'NO-SHOW') DEFAULT 'Scheduled'
+);
+
+CREATE TABLE departments (
+    departmentID int,
+    departmentNAME varchar(100),
+    officeloc varchar(100)
+);
+
+CREATE TABLE courses (
+    courseID int,
+    courseCODE varchar(100),
+    courseTITLE varchar(100),
+    NOC int
+);
+
+CREATE TABLE university_departments (
+    departmentID int,
+    departmentNAME varchar(100),
+    departmentofficeloc varchar(100)
+);
+
+CREATE TABLE course (
+    courseID int,
+    courseCODE int,
+    courseTITLE varchar(100),
+    NOC int
+);
