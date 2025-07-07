@@ -62,15 +62,4 @@ CREATE TABLE courses (
     NOC int
 );
 
-CREATE TABLE university_departments (
-    departmentID int,
-    departmentNAME varchar(100),
-    departmentofficeloc varchar(100)
-);
-
-CREATE TABLE course (
-    courseID int,
-    courseCODE int,
-    courseTITLE varchar(100),
-    NOC int
-);
+    
